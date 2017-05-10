@@ -8,14 +8,20 @@
 	<script type="text/javascript">
 		var strname = "陳會安";
 		if (window.strname) {
-			document.write("strname存在：" + strname + "<br/>");
+			document.write("strname存在：" + window.strname + "<br/>");
 		} else {
-			document.write("strname不存在：" + strname + "<br/>");
+			document.write("strname不存在：" + window.strname + "<br/>");
 		}
 		if (window.inBalance) {
-			document.write("inBalance存在：" + inBalance + "<br/>");
+			document.write("inBalance存在：" + window.inBalance + "<br/>");
 		} else {
-			document.write("inBalance不存在：" + inBalance + "<br/>");
+			document.write("inBalance不存在：" + window.inBalance + "<br/>");
+		}
+		strname = "陳會安";
+		if (window.strname) {
+			document.write("strname1存在：" + strname1 + "<br/>");
+		} else {
+			document.write("strname1不存在：" + strname1 + "<br/>");
 		}
 	</script>
 </body>
