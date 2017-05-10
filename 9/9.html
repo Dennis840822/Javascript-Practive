@@ -7,7 +7,9 @@
 <body>
 	<script type="text/javascript">
 		var strname = "陳會安";
-		if (window.strname) {
+		if (window.strname) {//如果在函數外宣告變數，讓變數變為全域變數的話，則就能套用全域變數之特性
+			//而全域變數在瀏覽器則視為window物件
+			//全域變數能覆蓋區域變數
 			document.write("strname存在：" + window.strname + "<br/>");
 		} else {
 			document.write("strname不存在：" + window.strname + "<br/>");
