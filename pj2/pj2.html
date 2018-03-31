@@ -1,0 +1,35 @@
+<!Doctype>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pj2</title>
+	<script type="text/javascript">
+		function fun1(){
+			var username = prompt("What`s your name","Enter your name");
+			if (username) {
+				alert("It is good to meet you", + username + ".");
+				document.getElementById("img").src = "picture/hellow.png";
+			}
+		}
+	</script>
+	<style type="text/css">
+		.one{
+			width: 500px;
+			height: 500px;
+			background-repeat: no-repeat;
+			padding-left: 50px;
+			margin-left: 800px;
+			float: left;
+		}
+		img{
+			position: absolute;
+			padding-top: 80px;
+		}
+	</style>
+</head>
+<body onload="alert('Welcome')">
+	<div class="one">
+		<img src="picture/picture.jpg" onclick="fun1()" id="img">
+	</div>
+</body>
+</html>
