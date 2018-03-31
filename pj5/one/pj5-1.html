@@ -1,0 +1,39 @@
+<!Doctype>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pj5-1</title>
+	<style type="text/css">
+		.one{
+			width: 500px;
+			height: 500px;
+			background-repeat: no-repeat;
+			padding-left: 50px;
+			margin-left: 800px;
+			float: left;
+		}
+		img{
+			position: absolute;
+			padding-top: 80px;
+		}
+	</style>
+	<script type="text/javascript">
+		setTimeout('alert("hellow");',2000);
+		//setInterval('alert("one");',3000);
+		//setInterval('alert("two");',4000);
+		//setInterval('alert("three");',5000);
+		var height = document.body.clientHeight;
+		var width = document.body.clientWidth;
+		function btn() {
+			alert("height\n" + height + "width\n" + width);
+			//alert(document.body.clientHeight + "height\n" + document.body.clientWidth + "width\n");
+		}
+	</script>
+</head>
+<body onload="alert('Welcome')">
+	<div class="one">
+		<!--<img src="picture/picture.jpg" onclick="alert('hellow')">-->
+		<button onclick="btn()">螢幕資訊</button>
+	</div>
+</body>
+</html>
