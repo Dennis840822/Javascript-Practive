@@ -13,6 +13,11 @@
 			document.getElementById("Subtotal").value = parseInt(Subtotal) * PRICEPERDOUNT;
 			document.getElementById("Tax").value = parseInt(document.getElementById("Subtotal").value) * TAXRATE;
 			document.getElementById("Total").value = parseInt(document.getElementById("Subtotal").value) + parseInt(document.getElementById("Tax").value);
+			var number1 = document.getElementById("Subtotal").value;
+			var number2 = document.getElementById("Tax").value;
+			var number3 = document.getElementById("Total").value;
+			var number5 = document.getElementById("name").value;
+			alert(+ number1 + "\n" + number2 + "\n" + number3 + "\n" + number5);
 		}
 	</script>
 	<style type="text/css">
@@ -49,7 +54,7 @@
 		</div>
 		<div>
 			姓名
-		<input type="text" name="name">
+		<input type="text" name="name" id="name">
 		</div>
 		<div>
 			蛋糕數量
