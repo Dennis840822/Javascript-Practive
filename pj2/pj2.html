@@ -7,7 +7,8 @@
 		function fun1(){
 			var username = prompt("What`s your name","Enter your name");
 			if (username) {
-				alert("It is good to meet you", + username + ".");
+				username.toString();
+				alert("It is good to meet you," + username + ".");
 				document.getElementById("img").src = "picture/hellow.png";
 			}
 		}
