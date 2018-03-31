@@ -4,11 +4,79 @@
 <head>
 	<title>pj3</title>
 	<style type="text/css"></style>
-	<script type="text/javascript"></script>
+	<script type="text/javascript">
+		function btn1(){
+			const PRICEPERDOUNT = 10;
+			const TAXRATE = 0.3;
+			var sum = 0;
+			var Subtotal = parseInt(document.getElementById("CakeCount").value) + parseInt(document.getElementById("GlazedCount").value);
+			document.getElementById("Subtotal").value = parseInt(Subtotal) * PRICEPERDOUNT;
+			document.getElementById("Tax").value = parseInt(document.getElementById("Subtotal").value) * TAXRATE;
+			document.getElementById("Total").value = parseInt(document.getElementById("Subtotal").value) + parseInt(document.getElementById("Tax").value);
+		}
+	</script>
+	<style type="text/css">
+		.cantain{
+			float: left;
+			margin-left: 800px;
+			margin-top: 100px;
+		}
+		.one{
+			margin-left: 100px;
+		}
+		.btnclass{
+			margin-left: 100px;
+		}
+		h2{
+			color: blue;
+			margin-left: 100px;
+		}
+		body{
+			background-image: url("picture/images.jpg");
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
 </head>
 <body>
-	<div>
-		
+	<div class="cantain">
+		<div class="one">
+			訂購單
+		</div>
+		<div>
+			<h2>food</h2>
+		</div>
+		<div>
+			姓名
+		<input type="text" name="name">
+		</div>
+		<div>
+			蛋糕數量
+			<input type="text" name="cake count" id="CakeCount">
+		</div>
+		<div>
+			其他甜點數量
+			<input type="text" name="glazed count" id="GlazedCount">
+		</div>
+		<div>
+			時間
+			<input type="text" name="minutes" id="Minuates">
+		</div>
+		<div>
+			小計
+			<input type="text" name="subtotal" id="Subtotal">
+		</div>
+		<div>
+			稅額
+			<input type="text" name="tax" id="Tax">
+		</div>
+		<div>
+			總額
+			<input type="text" name="total" id="Total">
+		</div>
+		<button class="btnclass" onclick="btn1()">送出</button>
 	</div>
+	
 </body>
 </html>
