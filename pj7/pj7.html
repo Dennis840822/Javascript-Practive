@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pj7</title>
+	<script type="text/javascript">
+		function btn1() {
+			if (navigator.cookieEnabled) {
+				alert('有cookie功能');
+			}
+			else{
+				alert('無cookie功能');
+			}
+		}
+	</script>
+	<style type="text/css" media="screen">
+		#button{
+			float: left;
+			margin-left: 675px;
+			margin-top: 100px;
+			border: none;
+			background-color: white;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<button type="button" id="button" onclick="btn1()">
+		偵測瀏覽器有無cookie
+	</button>
+</body>
+</html>
