@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pj8</title>
+	<style type="text/css" media="screen">
+		.personal{
+			position: absolute;
+			margin-left: 580px;
+			width: 250px;
+			margin-top: 90px;
+		}
+		.name{
+			position: absolute;
+			margin-left: 680px;
+			width: 250px;
+			margin-top: 60px;
+		}
+		.btn{
+			position: absolute;
+			margin-left: 769px;
+			width: 250px;
+			margin-top: 220px;
+		}
+		button{
+			cursor: pointer;
+			border-color: blue;
+			border-radius: 100px;
+		}
+	</style>
+	<script type="text/javascript">
+		function btn1(form1) {
+			alert(form1["Message"].value);//取得本表單name為Message的欄位值
+			alert(document.getElementById("ZIPcode").value);
+		}
+	</script>
+</head>
+<body>
+	<form action="pj8_submit" method="post" accept-charset="utf-8" name="form1">
+		<div class="name">
+			訂單
+		</div>
+		<div class="personal">
+			Message <input type="text" name="Message">
+			ZIP code <input type="text" name="ZIPcode" id="ZIPcode">
+			Fly date <input type="text" name="Flydate">
+			name <input type="text" name="name">
+			Phone <input type="text" name="Phone">
+			eamil <input type="text" name="eamil">
+		</div>
+		<div class="btn">
+			<button type="button" name="give" onclick="btn1(this.form)">送出</button>
+			<!--this.form是指本表單-->
+		</div>
+	</form>
+</body>
+</html>
