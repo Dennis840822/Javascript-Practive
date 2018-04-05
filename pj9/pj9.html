@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pj9</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+	<form action="pj8_submit" method="post" accept-charset="utf-8" name="form1">
+		<div class="paper">
+			訂單
+		</div>
+		<div class="personal">
+			Message <input type="text" name="Message" onblur="Monblur(this,Message_ERROR)">
+			<span id="Message_ERROR" class="message"></span>
+
+			ZIP code <input type="text" name="ZIPcode" id="ZIPcode" onblur="Zonblur(this,ZIP_ERROR)">
+			<span id="ZIP_ERROR" class="ZIP"></span>
+
+			Fly date <input type="text" name="Flydate" onblur="Fonblur(this,Fly_ERROR)">
+			<span id="Fly_ERROR" class="Fly"></span>
+
+			name <input type="text" name="name" onblur="nonblur(this,name_ERROR)">
+			<span id="name_ERROR" class="name"></span>
+
+			Phone <input type="text" name="Phone" onblur="Ponblur(this,Phone_ERROR)">
+			<span id="Phone_ERROR" class="Phone"></span>
+
+			eamil <input type="text" name="eamil" onblur="eonblur(this,email_ERROR)">
+			<span id="email_ERROR" class="email"></span>
+
+		</div>
+		<div class="btn">
+			<button type="button" name="give" onclick="btn1(this.form)">送出</button>
+		</div>
+	</form>
+</body>
+</html>
+<!--this.form是指本表單-->
+<!--在input的this是指傳遞欄位本身的值-->
+<!--onblur觸發函式括弧中沒有值和js沒有此function是不行的-->
+<!--如果每個input的onblur都使用alert，則會造成alert一直狂跳，非常不方便，且礙眼-->
+<!--用span標籤，直接在網頁頁面上顯示input的onblur訊息，極為方便-->

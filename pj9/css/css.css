@@ -1,0 +1,41 @@
+.personal{
+	position: absolute;
+	margin-left: 580px;
+	width: 250px;
+	margin-top: 90px;
+}
+.paper{
+	position: absolute;
+	margin-left: 680px;
+	width: 250px;
+	margin-top: 60px;
+}
+.btn{
+	position: absolute;
+	margin-left: 769px;
+	width: 250px;
+	margin-top: 220px;
+}
+button{
+	cursor: pointer;
+	border-color: blue;
+	border-radius: 100px;
+}
+.message{
+	color: red;
+}
+.ZIP{
+	color: red;
+}
+.Fly{
+	color: red;
+}
+.name{
+	color: red;
+}
+.Phone{
+	color: red;
+}
+.email{
+	color: red;
+}
