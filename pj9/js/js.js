@@ -56,6 +56,15 @@ function Fonblur(form_Fly,Fly_ERROR) {
 		}
 		return false;
 	}
+	else {
+		var RegExp1 = /^\d{2}\/\d{2}\/\d{4}$/;//定義正規表達式，新建日期檢查格式為各2為2數字1為4數字
+		if (!RegExp1.test(form_Fly.value)) {//進行驗證，檢查格式是否正確，回傳格式是否正確
+			Fly_ERROR.innerHTML = "請輸入正確日期格式";
+		}
+		else {
+			Fly_ERROR.innerHTML = "";
+		}
+	}
 	return true;
 }
 function nonblur(form_name,name_ERROR) {
