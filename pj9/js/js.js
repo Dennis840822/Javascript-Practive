@@ -58,6 +58,8 @@ function Fonblur(form_Fly,Fly_ERROR) {
 	}
 	else {
 		var RegExp1 = /^\d{2}\/\d{2}\/\d{4}$/;//定義正規表達式，新建日期檢查格式為各2為2數字1為4數字
+		//  /^\d{2}\/\d{2}\/\d{4}$/=>{數字}，代表子樣式可重複的次數；{數字,數字}，控制子樣式出現的範圍 = 數字重複出現次數的範圍
+		//  3種寫法1.指定數字/^\d{2}\/\d{2}\/\d{4}$/2.給數字範圍/^\d{2}\/\d{2}\/\d{3,4}$/3./^\d{2}\/\d{2}\/(\d{2}|\d{4})$/第3個數字重複次數給予重複2次OR3次重複選擇
 		if (!RegExp1.test(form_Fly.value)) {//進行驗證，檢查格式是否正確，回傳格式是否正確
 			Fly_ERROR.innerHTML = "請輸入正確日期格式";
 		}
@@ -83,12 +85,31 @@ function Ponblur(form_Phone,Phone_ERROR) {
 		}
 		return false;
 	}
+	else {
+		var RegExp2 = /^\d{2}-\d{7}$/;
+		if (!RegExp2.test(form_Phone.value)) {
+			Phone_ERROR.innerHTML = "請輸入正確電話格式";
+		}
+		else {
+			Phone_ERROR.innerHTML = "";
+		}
+	}
 	return true;
 }
 function eonblur(form_email,email_ERROR) {
 	if (form_email.value.length == 0) {
 		if (email_ERROR != null) {
 			email_ERROR.innerHTML = "請輸入email";
+		}
+		return false;
+	}
+	else {
+		var RegExp3 = /^[\w\.\-\_\+]+@[\w\_]+(\.\w{2,4})+$/;
+		if (!RegExp3.test(form_email.value)) {
+			email_ERROR.innerHTML = "請輸入正確email格式";
+		}
+		else {
+			email_ERROR.innerHTML = "";
 		}
 	}
 }
