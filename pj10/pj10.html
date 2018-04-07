@@ -6,6 +6,11 @@
 	<script type="text/javascript">
 		function btn1() {
 			document.getElementById("test1").innerHTML = "456";
+			//document.getElementById("number").firstChild.nodeValue = "101112";//number有個子節點，但子節點裡又有子節點，所以只更改到第1個子節點
+			var node = document.getElementById("number");
+			while (node.firstChild)
+				node.removeChild(node.firstChild);//移除number底下的第1個子節點
+			node.appendChild(document.createTextNode("101112"));//再加入新節點的內容文字
 			//var x = 0;
 			//x = document.getElementsByTagName("img")[2];//獲得標籤img第2個圖片的屬性值及內容
 		}
@@ -15,9 +20,11 @@
 	<div id="test1">
 		123
 	</div>
-	<p>456</p>
-	<p>789</p>
-	<p>101112</p>
+
+	<p id="number">
+		456<strong>789</strong>
+	</p>
+
 	<img src="picture/01.jpg" alt="">
 	<img src="picture/images (1).jpg" alt="">
 	<img src="picture/images (2).jpg" alt="">
