@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pj11</title>
+	<style type="text/css" media="screen">
+		.classdecision1{
+			background-color: red;
+		}
+		.classdecision2{
+			background-color: blue;
+		}
+		.testcolor{
+			background-color: yellow;
+		}
+		span.in{
+			background-color: black;
+		}
+		span.out{
+			background-color: purple;
+		}
+	</style>
+	<script type="text/javascript">
+		function btn1() {
+			alert(document.getElementById("decision1").className);//取得decision1的class名稱
+			document.getElementById("decision1").className = "testcolor";//decision1的class名稱做更改，以改變樣式
+			//document.getElementById("decision2").style.visibility = "hidden";
+			//1.可把span組件decision2的css樣式改為隱藏
+		}
+	</script>
+</head>
+<body>
+	<span id="decision1" class="classdecision1" onclick="changeScene1()" onmouseover= "this.className='in'" onmouseout="this.className='out'">start</span>
+	<span id="decision2" class="classdecision2" onclick="changeScene2()" onmouseover= "this.className='in'"
+	onmouseout="this.className='out'" style="visibility: hidden">stop</span>
+	<button type="button" onclick="btn1()">change</button>
+</body>
+</html>
+<!--this代表span這個HTML組件之物件-->
+<!--className是HTML組件所提供的功能之一，是代表css中的class選項-->
+<!-- 2.style="visibility: hidden"可把span組件decision2的css樣式改為隱藏-->
