@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+
+		array_test = [{id:"two"},{id:"222"},{id:"three"},{id:"111"},{id:"two"},{id:"three"},{id:"333"},{id:"two"},{id:"three"}];
+		//one_array = [one:"one",two:"two",three:"three"];
+		/*one_obj = {one:"one",two:"two",three:"three"};
+		console.log(array_test[0]);
+		console.log("one.obj:" + one_obj.one);*/
+
+		var array2 = {a:[1]};
+
+		var array = {};
+		//console.log("array_test:"+ typeof(array_test) );
+		//console.log("array:" + typeof(array));
+
+		$(document).ready(function(){
+			$.each(array_test, function(index, val) {
+				//console.log("array_test:" + typeof(array_test));//物件
+				 $.each(val, function(index, val) {
+				 	array[val] = val;//字串
+				 	//console.log("array[val]:" + typeof(array[val]));
+				 });
+			});
+			console.log(array);
+			jone(array);
+		});
+
+		function jone(array) {
+			$.each(array, function(index, val) {
+				//console.log(index);
+				 if (index == "111") {
+				 	//console.log(index);
+				 	$("#one").val(array[index]);
+				 }else if (index == "222") {
+				 	$("#two").val(array[index]);
+				 }else if (index == "333") {
+				 	$("#three").val(array[index]);
+				 }
+			});
+		}
+		var a = 1;
+
+		function btn1(a) {
+			obj.hello(a);
+		}
+		var obj = {
+			text: "yes",
+			"hello":function one(a) {
+				alert(this.text+a);
+			},
+		}
+
+		function one() {
+			function persional(height,age,gender) {//function也可當成物件來使用(稱為建構程序)
+				this.height;
+				this.age;
+				this.gender;
+				console.log(height);
+				console.log(age);
+				console.log(gender);
+			}
+			var one = new persional(180,20,"男");
+		}
+	</script>
+	<style type="text/css" media="screen">
+		.one{
+			border:5px blue solid;
+			width: 50px;
+			z-index:2;
+			background-color: white;
+			height: 50px;
+			margin-left: 20px;
+			position: absolute;
+			margin-top: 75px;
+		}
+		.two{
+			 border-top: none;
+			 position: absolute;
+			 border:5px #FFAC55 solid;
+			 width: 100px;
+			 height: 100px;
+			 margin-top: 100px;
+			 z-index:1;
+		}
+	</style>
+</head>
+<body>
+	<button type="button" id="btn1" onclick="one()">testobj</button>
+	<div class="one">
+	</div>
+	<div class="two">
+	</div>
+
+	<input type="text" id="one">
+	<input type="text" id="two">
+	<input type="text" id="three">
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="http://malsup.github.io/jquery.blockUI.js"></script>
+	<script type="text/javascript">
+		var obj = {};
+		var send_data;
+		var name_value,email_value;
+		function fun1() {
+			name_value = $("#name").val();
+			email_value = $("#email").val();
+			obj["email"] = email_value;
+			send_data = obj;
+			$.ajax({
+  				type: 'POST',
+  				url: "https://www.thef2e.com/api/isSignUp",
+  				data: {
+  					"email":$("#email").val()
+  				},
+  				success:function (data) {
+  					$.each(data, function(name, val) {
+  						$.blockUI({
+  							message: "<i class='fa fa-spinner fa-pulse orange' style='font-size:600%;borderWidth:0px;backgroundColor:transparent'></i>",
+                		});
+  					});
+  				},
+  				error:function() {
+  					alert("error");
+  				}
+			});
+		}
+	</script>
+	<style type="text/css" media="screen">
+		.orange {
+            color: #ff892a;
+        }
+	</style>
+</head>
+<body>
+	<p>姓名<input type="text" id="name"></p>
+	<p>email<input type="text" id="email"></p>
+	<button type="button" onclick="fun1()">送出</button>
+</body>
+</html>
